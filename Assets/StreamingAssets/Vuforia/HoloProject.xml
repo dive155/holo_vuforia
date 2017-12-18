@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="coat_correct_size" size="0.170000 0.182183" />
+    <ImageTarget name="coat_of_arms" size="1.000000 1.071667" />
+  </Tracking>
+</QCARConfig>
