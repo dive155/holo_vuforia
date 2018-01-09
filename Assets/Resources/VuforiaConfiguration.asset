@@ -15,8 +15,8 @@ MonoBehaviour:
     vuforiaLicenseKey: Ae/cZpz/////AAAAGUta0n80IEbap+UqlNySU6tW5kHpClykzpRTfWglqP8+mLkyFTuIvMn1oXo3lUBtnwTWRVovz+1wXyEl62HwNUisPnnAax74srW7zOit8HuoqrWyfH30ULOG3+UYqDFQYuJTgZpRMlop4yU6U5QkMqkvzkIauxVIHxbW7IDSN1Jzto4hcR7PChdA2gI6CvUW+O4hiH97MW4Qr3kt8MExLrih4FfpekC2zgtupvdcXMdZERaLPPlv2DvJosPAhefHt/zr9y8GA+FmE7Tau2QVqtV2BahIK3bmiNdvYphaU3l3SJkb70vXDRjtflCDnnF5QHdwyUTqhmTQ0NZSppeYS6+HWDks0d8uTw0UV2PHgCqE
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousImageTargets: 2
+    maxSimultaneousObjectTargets: 2
     useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
     cameraOffset: 0.06
     distortionRenderingMode: 2
     distortionRenderingLayer: 31
-    eyewearType: 1
+    eyewearType: 0
     stereoFramework: 0
     seeThroughConfiguration: 1
     viewerName: 

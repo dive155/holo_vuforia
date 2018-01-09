@@ -39,8 +39,8 @@ namespace HoloToolkit.Unity.InputModule
         [Tooltip("Whether the recognizer should be activated on start.")]
         public RecognizerStartBehavior RecognizerStart;
 
-        [Tooltip("The confidence level for the keyword recognizer.")]
-        public ConfidenceLevel RecognitionConfidenceLevel;
+        //[Tooltip("The confidence level for the keyword recognizer.")]
+//        public ConfidenceLevel RecognitionConfidenceLevel;
 
         [Tooltip("The keywords to be recognized and optional keyboard shortcuts.")]
         public KeywordAndKeyCode[] Keywords;
