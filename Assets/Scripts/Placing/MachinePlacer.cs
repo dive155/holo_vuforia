@@ -6,12 +6,42 @@ public class MachinePlacer : MonoBehaviour {
 
     [SerializeField] private Transform pivot1;
     [SerializeField] private Transform pivot2;
+    [SerializeField] private Transform hidePivot;
+
+    private bool firstTracked = false;
+    private bool secondTracked = false;
 
     void Update()
     {
-        this.transform.position = Vector3.Lerp(pivot1.position, pivot2.position, 0.5f);
-        this.transform.rotation = Quaternion.Lerp(pivot1.rotation, pivot2.rotation, 0.5f);
+        if (firstTracked && secondTracked)
+        {
+            this.transform.position = Vector3.Lerp(pivot1.position, pivot2.position, 0.5f);
+            this.transform.rotation = Quaternion.Lerp(pivot1.rotation, pivot2.rotation, 0.5f);
+        }
+        else
+        {
+            this.transform.position = hidePivot.transform.position;
+        }
     }
 
+    public void FirstLost()
+    {
+        firstTracked = false;
+    }
+
+    public void FirstFound()
+    {
+        firstTracked = true;
+    }
+
+    public void SecondLost()
+    {
+        secondTracked = false;
+    }
+
+    public void SecondFound()
+    {
+        secondTracked = true;
+    }
 
 }
