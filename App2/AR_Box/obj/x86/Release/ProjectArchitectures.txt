@@ -1,0 +1,4 @@
+D:\Program Files\Unity_Projects\holo_vuforia\App2\AR_Box\AR_Box.csproj;x86
+D:\Program Files\Unity_Projects\holo_vuforia\App2\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
+D:\Program Files\Unity_Projects\holo_vuforia\App2\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+D:\Program Files\Unity_Projects\holo_vuforia\App2\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
