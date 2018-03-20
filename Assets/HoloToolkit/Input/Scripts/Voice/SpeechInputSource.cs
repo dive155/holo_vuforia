@@ -3,6 +3,7 @@
 
 using System;
 using UnityEngine;
+using UnityEngine.Windows.Speech;
 
 #if UNITY_WSA || UNITY_STANDALONE_WIN
 using UnityEngine.Windows.Speech;

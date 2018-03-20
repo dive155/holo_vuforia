@@ -5,7 +5,6 @@ using UnityEngine;
 public class ArmAnimator : MonoBehaviour {
 
     [SerializeField] private Animator armAnimator;
-    [SerializeField] private Animator boxAnimator;
 
     public void MoveUp()
     {
@@ -16,22 +15,6 @@ public class ArmAnimator : MonoBehaviour {
     {
         armAnimator.SetTrigger("MoveDown");
     }
-
-    public void MoveOut()
-    {
-        boxAnimator.SetTrigger("MoveOut");
-    }
-
-    public void MoveIn()
-    {
-        boxAnimator.SetTrigger("MoveIn");
-    }
-
-    public void StopMoving()
-    {
-        boxAnimator.SetTrigger("StopMoving");
-    }
-
 
 
 }

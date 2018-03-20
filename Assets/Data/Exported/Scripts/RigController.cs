@@ -6,6 +6,7 @@ public class RigController : MonoBehaviour {
 
 
     [SerializeField] private ArmAnimator armAnimator;
+    [SerializeField] private BoxAnimator boxAnimator;
     [SerializeField] private BeltSpinner beltSpinner;
 	// Update is called once per frame
 	void Update () 
@@ -27,17 +28,17 @@ public class RigController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.O))
         {
-            armAnimator.MoveOut();
+            boxAnimator.MoveOut();
         }
 
         if (Input.GetKeyDown(KeyCode.I))
         {
-            armAnimator.MoveIn();
+            boxAnimator.MoveIn();
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            armAnimator.StopMoving();
+            boxAnimator.StopMoving();
         }
 	}
 }
