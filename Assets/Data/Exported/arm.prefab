@@ -1297,7 +1297,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Something is damaged
+  m_Text: "\u041D\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
+    \u043F\u0440\u0438 \u043E\u0442\u043A\u0440\u044B\u0442\u043E\u043C \u043A\u043E\u0440\u043F\u0443\u0441\u0435"
 --- !u!114 &114059466494395520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1357,7 +1358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TO BE CHANGED
+  m_Text: "\u0413\u041E\u0422\u041E\u0412 \u041A \u0420\u0410\u0411\u041E\u0422\u0415"
 --- !u!114 &114089393445736078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1666,7 +1667,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6b548f7fb80779246968d2d0c539f2ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a65cdf8700d422646bc87771383b5177, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1796,7 +1797,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4 steps
+  m_Text: "2 \u0444\u0443\u043D\u043A\u0446\u0438\u0438"
 --- !u!114 &114616903575298462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1809,16 +1810,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tasksInfos:
-  - taskText: '1: UNSCREW THE BOLTS'
+  - taskText: "1: \u041F\u0415\u0420\u0415\u041C\u0415\u0421\u0422\u0418\u0422\u042C
+      \u0413\u0420\u0423\u0417 \u0412\u0412\u0415\u0420\u0425"
     notes:
-    - prefix: 'Tool:'
-      icon: {fileID: 21300000, guid: d9ffd4ff976f04a41b0146948602d5d7, type: 3}
-      noteText: 1
     - prefix: 
-      icon: {fileID: 21300000, guid: 54390dbeb226acd47b18102cf154e2c4, type: 3}
-      noteText: 3.0
-    taskDescription: Look under the tablet and unscrew the bolts on the front of the
-      frame
+      icon: {fileID: 21300000, guid: 037b898b6c9b7ab4db669aadf563da43, type: 3}
+      noteText: 
+    - prefix: 
+      icon: {fileID: 21300000, guid: 01c846522612fcd4daa26267c5e61291, type: 3}
+      noteText: 
+    taskDescription: "\u041F\u0435\u0440\u0435\u043B\u043E\u0436\u0438\u0442\u044C
+      \u0433\u0440\u0443\u0437 \u043D\u0430 \u0432\u0435\u0440\u0445\u043D\u044E\u044E
+      \u0447\u0430\u0441\u0442\u044C \u043C\u0435\u0445\u0430\u043D\u0438\u0437\u043C\u0430"
     OnDonePressed:
       m_PersistentCalls:
         m_Calls:
@@ -1835,13 +1838,18 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-  - taskText: '2: PULL THE PART OUT '
+  - taskText: "2: \u0412\u0415\u0420\u041D\u0423\u0422\u042C \u0413\u0420\u0423\u0417
+      \u0412\u041D\u0418\u0417"
     notes:
-    - prefix: Caution
+    - prefix: 
       icon: {fileID: 21300000, guid: ffd44af3d1cc7d2479601524b69934c4, type: 3}
       noteText: 
-    taskDescription: Graps the tablet from both sides and carefully remove it from
-      the mount
+    - prefix: 
+      icon: {fileID: 21300000, guid: 037b898b6c9b7ab4db669aadf563da43, type: 3}
+      noteText: 
+    taskDescription: "\u041F\u0435\u0440\u0435\u043B\u043E\u0436\u0438\u0442\u044C
+      \u0433\u0440\u0443\u0437 \u043D\u0430 \u043D\u0438\u0436\u043D\u044E\u044E \u0447\u0430\u0441\u0442\u044C
+      \u043C\u0435\u0445\u0430\u043D\u0438\u0437\u043C\u0430"
     OnDonePressed:
       m_PersistentCalls:
         m_Calls:
@@ -1858,38 +1866,12 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-  - taskText: '3: PUSH NEW PART IN'
+  - taskText: "\u0417\u0410\u041A\u041E\u041D\u0427\u0418\u0422\u042C \u0420\u0410\u0411\u041E\u0422\u0423"
     notes:
     - prefix: 'Caution:'
       icon: {fileID: 21300000, guid: ffd44af3d1cc7d2479601524b69934c4, type: 3}
       noteText: 
-    taskDescription: Take a new tablet and insert it into the mount
-    OnDonePressed:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: SetAnimState
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: bolts_in
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-  - taskText: '4: SCREW THE BOLTS'
-    notes:
-    - prefix: 'Tools:'
-      icon: {fileID: 21300000, guid: d9ffd4ff976f04a41b0146948602d5d7, type: 3}
-      noteText: 1
-    - prefix: 
-      icon: {fileID: 21300000, guid: 0ddb485b5fe226c4da83fc3bfd9d8259, type: 3}
-      noteText: 3.0
-    taskDescription: Look under the tablet and screw the bolts back on the front of
-      the frame
+    taskDescription: 
     OnDonePressed:
       m_PersistentCalls:
         m_Calls:
@@ -1901,7 +1883,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: bolts_in
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 114851340519861382}
@@ -2050,7 +2032,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A PART
+  m_Text: "\u041C\u0410\u041D\u0418\u041F\u0423\u041B\u042F\u0422\u041E\u0420"
 --- !u!114 &114726279028378938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2105,7 +2087,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A PART
+  m_Text: "\u041C\u0410\u041D\u0418\u041F\u0423\u041B\u042F\u0422\u041E\u0420"
 --- !u!114 &114756937401526280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2138,7 +2120,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A PART
+  m_Text: "\u041C\u0410\u041D\u0418\u041F\u0423\u041B\u042F\u0422\u041E\u0420"
 --- !u!114 &114835587950690388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2416,8 +2398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 455, y: -51.999924}
-  m_SizeDelta: {x: 256.5, y: 77.4}
+  m_AnchoredPosition: {x: 546, y: -51}
+  m_SizeDelta: {x: 336.5, y: 77.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224074949574028906
 RectTransform:
@@ -2453,8 +2435,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 144.34, y: -52}
-  m_SizeDelta: {x: 239.3, y: 77.4}
+  m_AnchoredPosition: {x: 177.5, y: -52}
+  m_SizeDelta: {x: 305.7, y: 77.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224195392483799600
 RectTransform:
@@ -2489,7 +2471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: -136.60005}
+  m_AnchoredPosition: {x: -275, y: -141}
   m_SizeDelta: {x: 131.7, y: 79.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224237400178154410
@@ -2551,8 +2533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 297.38, y: -206.43}
-  m_SizeDelta: {x: 594.67, y: 412.8}
+  m_AnchoredPosition: {x: 372, y: -206.43}
+  m_SizeDelta: {x: 743.8, y: 412.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224339179513578098
 RectTransform:
@@ -2719,8 +2701,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.031, y: 1.6214}
-  m_SizeDelta: {x: 594.7179, y: 412.8051}
+  m_AnchoredPosition: {x: 0.0325, y: 1.6214}
+  m_SizeDelta: {x: 740.7937, y: 412.8051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224654046286064938
 RectTransform:
@@ -2737,8 +2719,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.5, y: -8.2751}
-  m_SizeDelta: {x: 279.8, y: 59.25}
+  m_AnchoredPosition: {x: 141.8, y: -8.2751}
+  m_SizeDelta: {x: 682.5, y: 59.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224690423117099978
 RectTransform:
