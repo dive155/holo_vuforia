@@ -127,7 +127,7 @@ namespace HoloToolkit.Unity.InputModule
             }
 
             interpolator.SetTargetPosition(placementPosition);
-            interpolator.SetTargetRotation(Quaternion.Euler(0, cameraTransform.localEulerAngles.y, 0));
+            interpolator.SetTargetRotation(placementRotation);
         }
 
         public virtual void OnInputClicked(InputClickedEventData eventData)

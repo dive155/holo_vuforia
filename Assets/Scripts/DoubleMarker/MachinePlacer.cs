@@ -8,7 +8,9 @@ public class MachinePlacer : MonoBehaviour {
 
 	[SerializeField] private Transform pivot1;
 	[SerializeField] private Transform pivot2;
-	[SerializeField] private Transform hidePivot;
+    [SerializeField] private Transform debugPivot1;
+    [SerializeField] private Transform debugPivot2;
+    [SerializeField] private Transform hidePivot;
     [SerializeField] private Transform cameraTransform;
 	[SerializeField] private Text debugText;
     [SerializeField] private float desiredDistance;
@@ -18,22 +20,42 @@ public class MachinePlacer : MonoBehaviour {
 
     [SerializeField] private SpawnObject spawner;
     private TapToPlace placer;
+    private bool debugMode;
 
 	void Update()
 	{
         if (placer == null)
             spawner.TryGetSpawner(out placer);
 
+        if (Input.GetKeyDown(KeyCode.V)) { debugMode = !debugMode; }
+
+        Transform aPivot1;
+        Transform aPivot2;
+
+        if (debugMode)
+        {
+            firstTracked = true;
+            secondTracked = true;
+
+            aPivot1 = debugPivot1;
+            aPivot2 = debugPivot2;
+        }
+        else
+        {
+            aPivot1 = pivot1;
+            aPivot2 = pivot2;
+        }
+
 		if (firstTracked && secondTracked)
 		{
-            float actualDistance = (pivot1.position - pivot2.position).magnitude;
+            float actualDistance = (aPivot1.position - aPivot2.position).magnitude;
             float ratio = desiredDistance / actualDistance;
 
-            Vector3 pos1 = cameraTransform.position + ((pivot1.position - cameraTransform.position) * ratio);
-            Vector3 pos2 = cameraTransform.position + ((pivot2.position - cameraTransform.position) * ratio);
+            Vector3 pos1 = cameraTransform.position + ((aPivot1.position - cameraTransform.position) * ratio);
+            Vector3 pos2 = cameraTransform.position + ((aPivot2.position - cameraTransform.position) * ratio);
 
             Vector3 pos = Vector3.Lerp(pos1, pos2, 0.5f);
-            Quaternion rot = Quaternion.Lerp(pivot1.rotation, pivot2.rotation, 0.5f);
+            Quaternion rot = Quaternion.Lerp(aPivot1.rotation, aPivot2.rotation, 0.5f);
 
             if (placer != null)
             {
