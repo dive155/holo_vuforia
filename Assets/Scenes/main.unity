@@ -150,6 +150,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7fc231133b18b840ad1bfef1a76d7a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &126374506 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+  m_PrefabInternal: {fileID: 1760882978}
 --- !u!1 &175018558
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +915,9 @@ MonoBehaviour:
   pivot1: {fileID: 1699716323}
   pivot2: {fileID: 281019737}
   hidePivot: {fileID: 1989964805}
+  cameraTransform: {fileID: 126374506}
   debugText: {fileID: 175018560}
+  desiredDistance: 0.6
 --- !u!4 &724991453
 Transform:
   m_ObjectHideFlags: 0

@@ -8,7 +8,9 @@ public class MachinePlacer : MonoBehaviour {
 	[SerializeField] private Transform pivot1;
 	[SerializeField] private Transform pivot2;
 	[SerializeField] private Transform hidePivot;
+    [SerializeField] private Transform cameraTransform;
 	[SerializeField] private Text debugText;
+    [SerializeField] private float desiredDistance;
 
 	private bool firstTracked = false;
 	private bool secondTracked = false;
@@ -18,9 +20,15 @@ public class MachinePlacer : MonoBehaviour {
 		
 		if (firstTracked && secondTracked)
 		{
-			this.transform.position = Vector3.Lerp(pivot1.position, pivot2.position, 0.5f);
-			this.transform.rotation = Quaternion.Lerp(pivot1.rotation, pivot2.rotation, 0.5f);
-		}
+            float actualDistance = (pivot1.position - pivot2.position).magnitude;
+            float ratio = desiredDistance / actualDistance;
+
+            Vector3 pos1 = cameraTransform.position + ((pivot1.position - cameraTransform.position) * ratio);
+            Vector3 pos2 = cameraTransform.position + ((pivot2.position - cameraTransform.position) * ratio);
+
+            this.transform.position = Vector3.Lerp(pos1, pos2, 0.5f);
+            this.transform.rotation = Quaternion.Lerp(pivot1.rotation, pivot2.rotation, 0.5f);
+        }
 		else
 		{
 			this.transform.position = hidePivot.transform.position;
