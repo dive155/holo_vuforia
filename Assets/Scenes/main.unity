@@ -822,7 +822,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 399344057}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1002,6 +1002,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 126374506}
   debugText: {fileID: 175018560}
   desiredDistance: 0.6
+  spawnOffset: {x: 0, y: -0.5, z: 0}
   spawner: {fileID: 1104200531}
 --- !u!4 &724991453
 Transform:
@@ -1331,7 +1332,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 867536447}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1

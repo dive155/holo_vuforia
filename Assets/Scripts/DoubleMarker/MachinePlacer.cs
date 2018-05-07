@@ -14,6 +14,7 @@ public class MachinePlacer : MonoBehaviour {
     [SerializeField] private Transform cameraTransform;
 	[SerializeField] private Text debugText;
     [SerializeField] private float desiredDistance;
+    [SerializeField] private Vector3 spawnOffset;
 
 	private bool firstTracked = false;
 	private bool secondTracked = false;
@@ -54,7 +55,7 @@ public class MachinePlacer : MonoBehaviour {
             Vector3 pos1 = cameraTransform.position + ((aPivot1.position - cameraTransform.position) * ratio);
             Vector3 pos2 = cameraTransform.position + ((aPivot2.position - cameraTransform.position) * ratio);
 
-            Vector3 pos = Vector3.Lerp(pos1, pos2, 0.5f);
+            Vector3 pos = Vector3.Lerp(pos1, pos2, 0.5f) + spawnOffset;
             Quaternion rot = Quaternion.Lerp(aPivot1.rotation, aPivot2.rotation, 0.5f);
 
             if (placer != null)
