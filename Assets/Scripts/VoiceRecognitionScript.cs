@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Windows.Speech;
+using UnityEngine.SceneManagement;
 
 public class VoiceRecognitionScript : MonoBehaviour
 {
     [SerializeField] 
-	private string[] keywords = new string[] { "done", "exit" };
+	private string[] keywords = new string[] { "done", "exit", "restart" };
 
     private KeywordRecognizer recognizer;
 
@@ -28,6 +29,10 @@ public class VoiceRecognitionScript : MonoBehaviour
         else if(recognizedWord == keywords[1])
         {
             Application.Quit();
+        }
+        else if (recognizedWord == keywords[2])
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
