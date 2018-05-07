@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using HoloToolkit.Unity.InputModule;
 
 public class MachinePlacer : MonoBehaviour {
 
@@ -15,9 +16,14 @@ public class MachinePlacer : MonoBehaviour {
 	private bool firstTracked = false;
 	private bool secondTracked = false;
 
+    [SerializeField] private SpawnObject spawner;
+    private TapToPlace placer;
+
 	void Update()
 	{
-		
+        if (placer == null)
+            spawner.TryGetSpawner(out placer);
+
 		if (firstTracked && secondTracked)
 		{
             float actualDistance = (pivot1.position - pivot2.position).magnitude;
@@ -26,12 +32,27 @@ public class MachinePlacer : MonoBehaviour {
             Vector3 pos1 = cameraTransform.position + ((pivot1.position - cameraTransform.position) * ratio);
             Vector3 pos2 = cameraTransform.position + ((pivot2.position - cameraTransform.position) * ratio);
 
-            this.transform.position = Vector3.Lerp(pos1, pos2, 0.5f);
-            this.transform.rotation = Quaternion.Lerp(pivot1.rotation, pivot2.rotation, 0.5f);
+            Vector3 pos = Vector3.Lerp(pos1, pos2, 0.5f);
+            Quaternion rot = Quaternion.Lerp(pivot1.rotation, pivot2.rotation, 0.5f);
+
+            if (placer != null)
+            {
+                placer.OverrideByMarker = true;
+                placer.LastKnownPosition = pos;
+                placer.LastKnownRotation = rot;
+            }
+
+            this.transform.position = pos;
+            this.transform.rotation = rot;
         }
 		else
 		{
 			this.transform.position = hidePivot.transform.position;
+
+            if (placer != null)
+            {
+                placer.OverrideByMarker = false;
+            }
 		}
 	}
 

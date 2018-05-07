@@ -918,6 +918,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 126374506}
   debugText: {fileID: 175018560}
   desiredDistance: 0.6
+  spawner: {fileID: 1104200531}
 --- !u!4 &724991453
 Transform:
   m_ObjectHideFlags: 0
@@ -1234,7 +1235,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 915187667}
   m_LocalRotation: {x: -0, y: 0.7071072, z: -0, w: 0.70710635}
-  m_LocalPosition: {x: 0.080000006, y: -0.0051, z: -0.013}
+  m_LocalPosition: {x: 0.080000006, y: -0.0039, z: -0.013}
   m_LocalScale: {x: 0.02475, y: 0.02154, z: 0.17104}
   m_Children: []
   m_Father: {fileID: 724991453}
@@ -1419,6 +1420,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1104200531 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114703202126375100, guid: bdc438a49e4c6314199ab96cea0a9fe7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1412499859}
+  m_Script: {fileID: 11500000, guid: 5a6cf020d14b4f346929c6f270d97a52, type: 3}
 --- !u!1001 &1109489840
 Prefab:
   m_ObjectHideFlags: 0
@@ -2313,7 +2320,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1745523213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.001, y: -0.0051, z: 0.057}
+  m_LocalPosition: {x: 0.001, y: -0.0051, z: 0.0658}
   m_LocalScale: {x: 0.024745207, y: 0.021539357, z: 0.17103758}
   m_Children: []
   m_Father: {fileID: 724991453}

@@ -8,6 +8,7 @@ public class SpawnObject : MonoBehaviour
 
 	[SerializeField]
     private GameObject objectPrefab;
+    private TapToPlace taper;
 
     private void Start()
     {
@@ -16,10 +17,12 @@ public class SpawnObject : MonoBehaviour
 
     public void Spawn()
 	{
-		GameObject instantiated = Instantiate (objectPrefab);
-		if (instantiated.GetComponentInChildren<TapToPlace> () != null && instantiated.GetComponentInChildren<TapToPlace>().isActiveAndEnabled) 
+        GameObject instantiated = Instantiate (objectPrefab);
+        taper = instantiated.GetComponentInChildren<TapToPlace>();
+
+        if (taper != null && taper.isActiveAndEnabled) 
 		{
-			instantiated.GetComponentInChildren<TapToPlace> ().IsBeingPlaced = true;
+            taper.IsBeingPlaced = true;
 		} 
 		else 
 		{
@@ -31,4 +34,19 @@ public class SpawnObject : MonoBehaviour
 
         gameObject.SetActive(false);
     }
+
+    public bool TryGetSpawner(out TapToPlace tap)
+    {
+        if (taper != null)
+        {
+            tap = taper;
+            return true;
+        }
+        else
+        {
+            tap = null;
+            return false;
+        }
+    }
+
 }

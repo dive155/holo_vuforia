@@ -50,6 +50,10 @@ namespace HoloToolkit.Unity.InputModule
 
         private Dictionary<GameObject, int> layerCache = new Dictionary<GameObject, int>();
 
+        public bool OverrideByMarker = false;
+        public Vector3 LastKnownPosition = Vector3.zero;
+        public Quaternion LastKnownRotation = Quaternion.identity;
+
         protected virtual void Start()
         {
             if (PlaceParentOnTap)
@@ -97,22 +101,32 @@ namespace HoloToolkit.Unity.InputModule
             if (!IsBeingPlaced) { return; }
             Transform cameraTransform = CameraCache.Main.transform;
 
-            Vector3 placementPosition = GetPlacementPosition(cameraTransform.position, cameraTransform.forward, DefaultGazeDistance);
-
-            // Here is where you might consider adding intelligence
-            // to how the object is placed.  For example, consider
-            // placing based on the bottom of the object's
-            // collider so it sits properly on surfaces.
-
-            if (PlaceParentOnTap)
+            Vector3 placementPosition;
+            Quaternion placementRotation;
+            if (!OverrideByMarker)
             {
-                placementPosition = ParentGameObjectToPlace.transform.position + (placementPosition - gameObject.transform.position);
+                placementPosition = GetPlacementPosition(cameraTransform.position, cameraTransform.forward, DefaultGazeDistance);
+
+                // Here is where you might consider adding intelligence
+                // to how the object is placed.  For example, consider
+                // placing based on the bottom of the object's
+                // collider so it sits properly on surfaces.
+
+                if (PlaceParentOnTap)
+                {
+                    placementPosition = ParentGameObjectToPlace.transform.position + (placementPosition - gameObject.transform.position);
+                }
+
+                // Rotate this object to face the user.
+                placementRotation = Quaternion.Euler(0, cameraTransform.localEulerAngles.y, 0);
+            }
+            else
+            {
+                placementPosition = LastKnownPosition;
+                placementRotation = LastKnownRotation;
             }
 
-            // update the placement to match the user's gaze.
             interpolator.SetTargetPosition(placementPosition);
-
-            // Rotate this object to face the user.
             interpolator.SetTargetRotation(Quaternion.Euler(0, cameraTransform.localEulerAngles.y, 0));
         }
 
